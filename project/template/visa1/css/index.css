@@ -1,0 +1,177 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html {
+  color: #000;
+  background: #FFF;
+  font-family: 'Microsoft Yahei';
+  width: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: normal;
+  font-weight: normal; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-size: medium;
+  font-style: normal;
+  font-weight: normal; }
+
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block; }
+
+/* =General
+-----------------------------------------------------------------------------*/
+/* Class for clearing floats */
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+* html .clear {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End clearing floats */
+.zoom {
+  zoom: 1; }
+
+.hidden {
+  visibility: hidden; }
+
+.none {
+  display: none; }
+
+a {
+  cursor: pointer; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(/static/visa1/images/bg.jpg) no-repeat;
+  background-size: cover; }
+  .page .main {
+    width: 94%;
+    height: 94%;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px; }
+  .page .logo {
+    width: 28%;
+    display: block;
+    margin: 20px auto 30px auto; }
+  .page.page1 p {
+    color: #3c3c3d;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 500;
+    margin-bottom: 30%; }
+  .page.page1 .b1 {
+    width: 60%;
+    display: block;
+    margin: 0 auto; }
+  .page.page2 p {
+    width: 78%;
+    margin: 20% auto 10% auto; }
+  .page.page2 input {
+    width: 78%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    display: block;
+    margin: 0 auto 10% auto;
+    height: 35px; }
+  .page.page2 .b2 {
+    width: 78%;
+    display: block;
+    margin: 0 auto; }
+  .page.page3 .main > div {
+    width: 80%;
+    margin: 5% auto;
+    font-size: 0; }
+    .page.page3 .main > div span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+      text-align: right;
+      width: 35%;
+      margin-right: 5%;
+      color: #3c3c3d; }
+    .page.page3 .main > div input {
+      display: inline-block;
+      vertical-align: middle;
+      width: 56%;
+      padding: 0 1%;
+      font-size: 14px;
+      border: 1px solid #a4a4a4;
+      background: white;
+      border-radius: 3px;
+      height: 25px; }
+  .page.page3 .main .b3 {
+    width: 78%;
+    display: block;
+    margin: 0 auto; }
+  .page.page4 p {
+    width: 80%;
+    color: #3c3c3d;
+    text-align: center;
+    line-height: 28px;
+    margin: 20% auto 10% auto; }
+  .page.page4 .b4 {
+    width: 28%;
+    display: block;
+    margin: 0 auto; }

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>点亮中国 助威国足</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<script src="/static/guozu/js/zepto.min.js"></script>
+	<script>
+		// window.uData = null;
+		// window.uData = {"openid":"oODnEt7f4xbtOKk1QIo3wYH_B77Y","nickname":"🎩🕶啊啊","sex":1,"language":"zh_CN","city":"Chaoyang","province":"Beijing","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/Q3auHgzwzM4J1nd8hlmqwbypZ4cibRw49WyNNibsc6YuVNK1pEibeRLIurjZZoAZhKkxU4Y9ugEDDwicBH4LeibXJ9w\/0","privilege":[]};
+		if( window.location.href.indexOf('code=') !== -1 ){
+			$.ajax({
+				url: '/project/lesports_guozu/getUserInfo/',
+				type: 'POST',
+				data: {
+					code: window.location.href.split('code=')[1].split('&')[0]
+				},
+				success: function(data){
+					data = JSON.parse(data);
+					window.uData = {"nickname": data.nickname, "openid": data.openid, "headimgurl": data.headimgurl};
+				}
+			})
+		}
+		else{
+			window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7dfb9e650ce540b1&redirect_uri='+window.location.href+'&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect';
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="/static/guozu/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/guozu/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/guozu/css/index.css">
+</head>
+<body>
+	<audio id="music" src="http://7xin8y.com1.z0.glb.clouddn.com/song.mp3" style="display: none;" loop="loop"></audio>
+	<section class="main">
+		<section class="page page1">
+				<div class="page1-container">
+					<img src="/static/guozu/images/l1.png" class="loading-img flash animated l1" />
+					<img src="/static/guozu/images/l2.png" class="loading-img flash animated l2" />
+					<img src="/static/guozu/images/t1.png" class="t1" />
+					<img src="/static/guozu/images/t2.png" class="t2 tada animated" />
+				</div>
+				<img src="/static/guozu/images/p1.png" class="p1" />
+		</section>
+		<section class="page page2">
+			<div class="swiper-container swiper-loading">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide1">
+						<img src="/static/guozu/images/i1-t.png" class="i1-t hidden" />
+						<img src="/static/guozu/images/p2.png" class="p2 hidden" />
+					</div>
+					<div class="swiper-slide slide2">
+						<img src="/static/guozu/images/i2-t.png" class="i2-t hidden" />
+						<img src="/static/guozu/images/p10.png" class="p10 hidden" />
+					</div>
+					<div class="swiper-slide slide3">
+						<img src="/static/guozu/images/i3-t.png" class="i3-t hidden" />
+						<img src="/static/guozu/images/p3.png" class="p3 hidden" />
+						<img src="/static/guozu/images/p4.png" class="p4 hidden" />
+					</div>
+				</div>
+			</div>
+			<img src="/static/guozu/images/up.png" class="up">
+			<img src="/static/guozu/images/voice.png" class="voice open">
+		</section>
+		<section class="page page3">
+			<img src="/static/guozu/images/tips.png" class="tipss">
+			<div class="page3-con">
+				<div class="page3-top">
+					<div class="map-modal">
+						<img src="" class="map-avatar">
+						<div>
+							<p class="map-title"></p>
+							<p class="map-word"></p>
+						</div>
+						<span class="map-time"></span>
+					</div>
+					<div class="map" id="map"></div>
+					<div class="page3-title">已有<span></span>位球迷<p>一起点亮中国，助力国足</p></div>
+					<div class="page3-btn">
+						<img src="/static/guozu/images/ball1.gif" class="ball">
+						<img src="/static/guozu/images/line.png" class="line">
+					</div>
+				</div>
+				<div class="page3-list">
+					<img src="/static/guozu/images/p5.png" class="p5" />
+					<ul>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="page page4">
+			<div class="page4-con">
+				<img src="/static/guozu/images/close.png" class="close" />
+				<div class="upload">
+					<form  id="upload_form" enctype="multipart/form-data" >
+						<input type="file" id="upload_file">
+						<!-- <img src="/static/guozu/images/upload.png" class="upload-btn" /> -->
+						<img src="" class="preview" />
+						<p>点击头像可以修改</p>
+					</form>
+				</div>
+				<div class="tips">
+					<p>选择祝福语</p>
+					<div class="swiper-container swiper-tip">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" index="1" data="只要血液一天是红色的，心就一天是国足的！"><img src="/static/guozu/images/tip1.png"></div>
+							<div class="swiper-slide" index="2" data="赢了一起狂，输了一起扛！国足雄起！"><img src="/static/guozu/images/tip2.png"></div>
+							<div class="swiper-slide" index="3" data="昆明，你能为我们带来第一场胜利吗？！"><img src="/static/guozu/images/tip3.png"></div>
+							<div class="swiper-slide" index="4" data="莫愁长征无知己，天涯海角永相随！国足必胜！"><img src="/static/guozu/images/tip4.png"></div>
+							<div class="swiper-slide" index="5" data="国足，我们真的不想再失望！拿出斗志，拿下一场！"><img src="/static/guozu/images/tip5.png"></div>
+						</div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+				<img src="/static/guozu/images/p8.png" class="p8" />
+				<p class="publish-tip">发布中...</p>
+			</div>
+		</section>
+		<section class="page page5">
+			<div class="page5-con">
+				<img src="/static/guozu/images/close.png" class="close" />
+				<div class="page5-img">
+					<img src="" class="logo">
+					<!-- <img src="" class="page5-avatar"> -->
+					<!-- <span></span> -->
+					<!-- <p class="page5-name"></p> -->
+					<!-- <p class="page5-word"></p> -->
+				</div>
+				<p>长按可以将上面的卡片保存下来哦~</p>
+				<img src="/static/guozu/images/p11.png" class="p11">
+			</div>
+		</section>
+		<section class="page page6">
+			<div class="page6-con">
+				<img src="/static/guozu/images/t3.png" class="t3">
+				<div class="phone">
+					<div class="phone-main">
+						<div class="phone1">
+							<p>恭喜您获得体验券一张！</p>
+							<div class="phone-item">
+								手机号：<input type="text" class="phone-number">
+							</div>
+							<div class="phone-item">
+								验证码：<input type="text" class="short code"><span class="getcode">获取验证码</span>
+							</div>
+							<div class="phone-btn">立即领奖</div>
+						</div>
+						<div class="phone2">
+							<p>恭喜您获得体验券一张！</p>
+							<p>兑换码已通过短信发送到：<span></span>，请及时兑换</p>
+						</div>
+					</div>
+					<img src="/static/guozu/images/p9.png" class="p9" />
+				</div>
+				<img src="/static/guozu/images/p12.png" class="p12">
+				<img src="/static/guozu/images/p13.png" class="p13">
+			</div>
+		</section>
+		<section class="page page7">
+			<img src="/static/guozu/images/share.png" class="share">
+		</section>
+		<section class="page page8">
+			<img src="" class="share-img">
+			<img src="/static/guozu/images/p14.png" class="p14">
+		</section>
+	</section>
+	<script src="/static/guozu/js/swiper.jquery.min.js"></script>
+	<script src="/static/guozu/js/echarts.min.js"></script>
+	<script src="/static/guozu/js/china.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script>
+				wx.config({
+					debug: false,
+					appId: 'wx7dfb9e650ce540b1',
+					timestamp: {{data.timestamp}},
+					nonceStr: '{{data.nonceStr}}',
+					signature: '{{data.signature}}',
+					jsApiList: [
+						'onMenuShareTimeline', 'onMenuShareAppMessage'
+					]
+				});
+		{{request}}
+	</script>
+	<script src="/static/guozu/js/min/index-min.js"></script>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a12ca1eb3e41bfc298b3fff6c77e86d6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>力帆汽车2015上海车展微直播</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/lifan/css/index.css">
+		<link rel="stylesheet" type="text/css" href="/static/lifan/css/jquery.fancybox.css">
+	</head>
+	<body>
+        <div class="top">
+        	<img src="/static/lifan/images/top.jpg">
+        </div>
+        <div class="main">
+            {% for item in data %}
+                {% if item.types == 1 %}
+                    <section class="image">
+                        <img src="/static/lifan/images/logo.jpg" class="logo">
+                        <div class="section-container">
+                            <h2>{{ item.name }}</h2>
+                            <p>{{ item.desc }}</p>
+                            <div class="image-container">
+                                {% if item.img1 %}
+                                    <a class="fancybox" rel="gallery{{ item.id }}" style="background-image:url({{ item.img1 }});"></a>
+                                {% endif %}
+                                {% if item.img2 %}
+                                    <a class="fancybox" rel="gallery{{ item.id }}" style="background-image:url({{ item.img2 }});"></a>
+                                {% endif %}
+                                {% if item.img3 %}
+                                    <a class="fancybox" rel="gallery{{ item.id }}" style="background-image:url({{ item.img3 }});"></a>
+                                {% endif %}
+                                {% if item.img4 %}
+                                    <a class="fancybox" rel="gallery{{ item.id }}" style="background-image:url({{ item.img4 }});"></a>
+                                {% endif %}
+                                {% if item.img5 %}
+                                    <a class="fancybox" rel="gallery{{ item.id }}" style="background-image:url({{ item.img5 }});"></a>
+                                {% endif %}
+                                {% if item.img6 %}
+                                    <a class="fancybox" rel="gallery{{ item.id }}" style="background-image:url({{ item.img6 }});"></a>
+                                {% endif %}
+                                {% if item.img7 %}
+                                    <a class="fancybox" rel="gallery{{ item.id }}" style="background-image:url({{ item.img7 }});"></a>
+                                {% endif %}
+                                {% if item.img8 %}
+                                    <a class="fancybox" rel="gallery{{ item.id }}" style="background-image:url({{ item.img8 }});"></a>
+                                {% endif %}
+                                {% if item.img9 %}
+                                    <a class="fancybox" rel="gallery{{ item.id }}" style="background-image:url({{ item.img9 }});"></a>
+                                {% endif %}
+                            </div>
+                            <div class="comments">
+                                <ul>
+                                    {% for comment in item.comments %}
+                                        <li {% if forloop.counter > 2 %}class="comment-more"{% endif %}>{{ comment.content }}</li>
+                                    {% endfor %}
+                                    {% if item.comments.count > 2 %}
+                                        <a></a>
+                                    {% endif %}
+                                    <div class="comment-con">
+                                        <input type="text" class="submit" placeholder="评论" data-id="{{ item.id }}">
+                                        <a class="commnet-btn">发布</a>
+                                    </div>
+                                </ul>
+                            </div>
+                            <span class="time">{{ item.time|date:"Y年m月d日 H:i" }}</span>
+                        </div>
+                    </section>
+                {% elif item.types == 2 %}
+                    <section class="video">
+                        <img src="/static/lifan/images/logo.jpg" class="logo">
+                        <div class="section-container">
+                            <h2>{{ item.name }}</h2>
+                            <p>{{ item.desc }}</p>
+                            <div class="video-container">
+                                <video src="{{ item.video }}" controls="controls"></video>
+                            </div>
+                            <div class="comments">
+                                <ul>
+                                    {% for comment in item.comments %}
+                                        <li {% if forloop.counter > 2 %}class="comment-more"{% endif %}>{{ comment.content }}</li>
+                                    {% endfor %}
+                                    {% if item.comments.count > 2 %}
+                                        <a></a>
+                                    {% endif %}
+                                    <div class="comment-con">
+                                        <input type="text" class="submit" placeholder="评论" data-id="{{ item.id }}">
+                                        <a class="commnet-btn">发布</a>
+                                    </div>
+                                </ul>
+                            </div>
+                            <span class="time">{{ item.time|date:"Y年m月d日 H:i" }}</span>
+                        </div>
+                    </section>
+                {% elif item.types == 3 %}
+                    <section class="game">
+                        <img src="/static/lifan/images/logo.jpg" class="logo">
+                        <div class="section-container">
+                            <h2>{{ item.name }}</h2>
+                            <a class="game-container" href="{{ item.gameLink }}">
+                                <div><img src="{{ item.gameImg }}"><span>{{ item.gameTitle }}</span></div>
+                            </a>
+                            <div class="comments">
+                                <ul>
+                                    {% for comment in item.comments %}
+                                        <li {% if forloop.counter > 2 %}class="comment-more"{% endif %}>{{ comment.content }}</li>
+                                    {% endfor %}
+                                    {% if item.comments.count > 2 %}
+                                        <a></a>
+                                    {% endif %}
+                                    <div class="comment-con">
+                                        <input type="text" class="submit" placeholder="评论" data-id="{{ item.id }}">
+                                        <a class="commnet-btn">发布</a>
+                                    </div>
+                                </ul>
+                            </div>
+                            <span class="time">{{ item.time|date:"Y年m月d日 H:i" }}</span>
+                        </div>
+                    </section>
+                {% elif item.types == 4 %}
+                    <section class="news">
+                        <img src="/static/lifan/images/logo.jpg" class="logo">
+                        <div class="section-container">
+                            <h2>{{ item.name }}</h2>
+                            <div class="news-container" href="">
+                                <div><img src="{{ item.newsImg }}"><span>{{ item.newsTitle }}</span></div>
+                                <p class="cutoff">{{ item.newsContent|safe|truncatechars:100 }}...</p>
+                                <p class="full">{{ item.newsContent|safe }}</p>
+                                <a>点击展开全文</a>
+                            </div>
+                            <div class="comments">
+                                <ul>
+                                    {% for comment in item.comments %}
+                                        <li {% if forloop.counter > 2 %}class="comment-more"{% endif %}>{{ comment.content }}</li>
+                                    {% endfor %}
+                                    {% if item.comments.count > 2 %}
+                                        <a></a>
+                                    {% endif %}
+                                    <div class="comment-con">
+                                        <input type="text" class="submit" placeholder="评论" data-id="{{ item.id }}">
+                                        <a class="commnet-btn">发布</a>
+                                    </div>
+                                </ul>
+                            </div>
+                            <span class="time">{{ item.time|date:"Y年m月d日 H:i" }}</span>
+                        </div>
+                    </section>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <script src="/static/lifan/js/jquery.js"></script>
+        <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script src="/static/lifan/js/min/index-min.js"></script>
+        <script>
+            var my_title = '力帆汽车2015上海车展微直播';
+            var my_desc = '力帆汽车2015上海车展，感受力帆的“速度与激情”';
+            var my_imgUrl = 'http://ex.wyyun.com/static/lifan/images/top.jpg';
+            $(function(){
+            $.ajax({
+                type : "GET",
+                url : "http://ex.wyyun.com/getWechatJSSDK/",
+                data : {'url': window.location.href},
+                success : function(result){
+                    // if(result.code == 0){
+                        result = JSON.parse(result);
+                        callback(result);
+                    // }
+                }
+            });
+
+            function callback(config){
+                wx.config(config);
+                wx.ready(function(){
+                    wx.onMenuShareAppMessage({
+                        title: my_title,
+                        desc: my_desc,
+                        link: "http://ex.wyyun.com/project/lifan/",
+                        imgUrl: my_imgUrl,
+                        trigger: function (res) {
+
+                        },
+                        success: function (res) {
+
+                        },
+                        cancel: function (res) {
+
+                        },
+                        fail: function (res) {
+                            alert(JSON.stringify(res));
+                        }
+                    });
+                    wx.onMenuShareTimeline({
+                        title: my_title,
+                        desc: my_desc,
+                        link: "http://ex.wyyun.com/project/lifan/",
+                        imgUrl: my_imgUrl,
+                        trigger: function (res) {
+
+                        },
+                        success: function (res) {
+
+                        },
+                        cancel: function (res) {
+
+                        },
+                        fail: function (res) {
+                            alert(JSON.stringify(res));
+                        }
+                    });
+                    wx.onMenuShareQQ({
+                        title: my_title,
+                        desc: my_desc,
+                        link: "http://ex.wyyun.com/project/lifan/",
+                        imgUrl: my_imgUrl,
+                        trigger: function (res) {
+
+                        },
+                        complete: function (res) {
+
+                        },
+                        success: function (res) {
+
+                        },
+                        cancel: function (res) {
+
+                        },
+                        fail: function (res) {
+                            alert(JSON.stringify(res));
+                        }
+                    });
+                    wx.onMenuShareWeibo({
+                        title: my_title,
+                        desc: my_desc,
+                        link: "http://ex.wyyun.com/project/lifan/",
+                        imgUrl: my_imgUrl,
+                        trigger: function (res) {
+
+                        },
+                        complete: function (res) {
+
+                        },
+                        success: function (res) {
+
+                        },
+                        cancel: function (res) {
+
+                        },
+                        fail: function (res) {
+                            alert(JSON.stringify(res));
+                        }
+                    });
+                });
+            }
+        });
+        </script>
+        <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?e67cc40e119a181073d153756555b792";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>爱签证企业内购</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/visa/css/index.css">
+	</head>
+	<body>
+        <table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>渠道号</th>
+							<th>姓名</th>
+							<th>电话</th>
+							<th>Email</th>
+							<th>国家</th>
+							<th>人数</th>
+							<th>同行人</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for item in data %}
+							<tr>
+								<td>{{item.id}}</td>
+								<td>{{item.companyCode}}</td>
+								<td>{{item.name}}</td>
+								<td>{{item.phone}}</td>
+								<td>{{item.email}}</td>
+								<td>{{item.country}}</td>
+								<td>{{item.amount}}</td>
+								<td>{{item.people}}</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+	</body>
+</html>

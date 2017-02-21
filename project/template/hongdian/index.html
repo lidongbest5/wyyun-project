@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<link rel="stylesheet" type="text/css" href="/static/hongdian/css/index.css">
+		<link rel="stylesheet" type="text/css" href="/static/hongdian/css/swiper.min.css">
+	</head>
+	<body>
+        <div class="page page1">
+					<div class="page-con">
+						<div class="page1-top">
+							<div class="main">
+								<img src="/static/hongdian/images/title.png" class="title">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+								        <div class="swiper-slide">
+													<img src="/static/hongdian/images/p1.png" class="p1">
+													<p>特等奖：iPhone 7<br/>价值：5388元</p>
+												</div>
+								        <div class="swiper-slide">
+													<img src="/static/hongdian/images/p2.png" class="p2">
+													<p>一等奖：JBL Horizon音箱<br/>价值：1388元</p>
+												</div>
+								        <div class="swiper-slide">
+													<img src="/static/hongdian/images/p3.png" class="p3">
+													<p>二等奖：1:18原厂纯金属车模一台<br/>价值：399元</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="/static/hongdian/images/p4.png" class="p4">
+													<p>精美修甲套装<br/>价值：38元</p>
+												</div>
+								    </div>
+								    <div class="swiper-button-prev"></div>
+								    <div class="swiper-button-next"></div>
+								</div>
+								<div class="main-bottom">
+									<img src="/static/hongdian/images/b1.png" class="b1">
+								</div>
+							</div>
+						</div>
+						<div class="page1-list">
+							<h2>已中奖会员</h2>
+							<ul></ul>
+						</div>
+					</div>
+				</div>
+        <div class="page page2">
+					<div class="main">
+						<img src="/static/hongdian/images/title.png" class="title">
+						<div class="lottery">
+							<div class="lottery-container">
+								<div id="container"></div>
+								<div class="lottery-prize">
+									<div class="prize1">
+										<p>恭喜获得iPhone 7</p>
+										<img src="/static/hongdian/images/card2.png" class="card2">
+									</div>
+									<div class="prize2">
+										<p>恭喜获得JBL Horizon音箱</p>
+										<img src="/static/hongdian/images/card2.png" class="card2">
+									</div>
+									<div class="prize3">
+										<p>恭喜获得1:18原厂纯金属车模</p>
+										<img src="/static/hongdian/images/card2.png" class="card2">
+									</div>
+									<div class="prize4">
+										<p>恭喜获得精美修甲套装</p>
+										<img src="/static/hongdian/images/card2.png" class="card2">
+									</div>
+									<div class="prize5">
+										<img src="/static/hongdian/images/card3.png" class="card3">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-bottom"></div>
+					</div>
+				</div>
+        <div class="page page4">
+					<div class="main">
+						<img src="/static/hongdian/images/title.png" class="title">
+						<div class="form">
+							<p>请输入手机号</p>
+							<input type="text" class="phone">
+							<p>请输入验证码</p>
+							<div>
+								<input type="text" class="code">
+								<a class="getCode">获取验证码</a>
+							</div>
+						</div>
+						<div class="main-bottom">
+							<img src="/static/hongdian/images/b2.png" class="b2">
+						</div>
+					</div>
+				</div>
+        <div class="page page5">
+					<div class="main">
+						<img src="/static/hongdian/images/title.png" class="title">
+						<div class="form">
+							<section>
+								姓名<input type="text" class="name">
+							</section>
+							<section>
+								地址<input type="text" class="address">
+							</section>
+							<section>
+								电话<input type="text" class="phone1">
+							</section>
+						</div>
+						<div class="main-bottom">
+							<img src="/static/hongdian/images/b3.png" class="b3">
+						</div>
+					</div>
+				</div>
+				<div class="page page6">
+					<div class="main">
+						<img src="/static/hongdian/images/title.png" class="title">
+						<div>
+							<h3>信息提交成功</h3>
+							<p>获得特等奖、一等奖、二等奖的用户，需在7个工作日内联系工作人员，奖品会邮寄至用户手中；获得三等奖的用户请在车展现场领取</p>
+						</div>
+						<div class="main-bottom">
+							<img src="/static/hongdian/images/b4.png" class="b4">
+						</div>
+					</div>
+				</div>
+				<div class="page page7">
+					<img src="/static/hongdian/images/share.png">
+				</div>
+				<div class="page page8">
+					<ul></ul>
+				</div>
+				<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+				<script>
+							wx.config({
+								debug: false,
+								appId: 'wx7dfb9e650ce540b1',
+								timestamp: {{data.timestamp}},
+								nonceStr: '{{data.nonceStr}}',
+								signature: '{{data.signature}}',
+								jsApiList: [
+									'onMenuShareTimeline', 'onMenuShareAppMessage'
+								]
+							});
+					{{request}}
+				</script>
+        <script src="/static/hongdian/js/zepto.min.js"></script>
+        <script src="/static/hongdian/js/Lottery.js"></script>
+        <script src="/static/hongdian/js/swiper.jquery.min.js"></script>
+        <script src="/static/hongdian/js/min/index-min.js"></script>
+	</body>
+</html>

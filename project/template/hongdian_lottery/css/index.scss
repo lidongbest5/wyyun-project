@@ -1,0 +1,315 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html{color:#000;background:#FFF;font-family: 'Microsoft Yahei';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:normal;font-weight:normal;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-size:medium;font-style:normal;font-weight:normal;}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block;}
+
+/* =General
+-----------------------------------------------------------------------------*/
+/* Class for clearing floats */
+.clearfix:after {content:"."; height:0; visibility:hidden; display:block; clear:both;}
+* html .clear {height:1%;}
+.clearfix {display:block;}
+/* End clearing floats */
+.zoom{zoom:1;}
+.hidden{visibility:hidden;}
+.none{display:none;}
+
+a:link, a:visited{ text-decoration: none;}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: black;
+}
+
+.page{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    background: url(/static/hongdian_lottery/images/bg.jpg) no-repeat;
+    background-size: contain;
+    background-color: black;
+
+    &.page1{
+      z-index: 10;
+      display: block;
+
+      .b1{
+        width: 46%;
+        position: absolute;
+        left: 27%;
+        bottom: 30%;
+      }
+
+      p{
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        color: #ffffb6;
+        line-height: 22px;
+        position: absolute;
+        left: 0;
+        bottom: 5%;
+      }
+    }
+
+    &.page2{
+      z-index: 9;
+      display: none;
+
+      .page2-con{
+        width: 80%;
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+
+        h3{
+          color: white;
+          text-align: right;
+          margin-bottom: 5px;
+          font-size: 0.9em;
+        }
+
+        section{
+          margin-bottom: 15px;
+          color: white;
+
+          span{
+            width: 20%;
+            display: inline-block;
+            vertical-align: middle;;
+          }
+
+          input{
+            width: 76%;
+            display: inline-block;
+            vertical-align: middle;
+            border: none;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 5px;
+            padding: 0 2%;
+            outline: none;
+          }
+
+          .code{
+            width: 36%;
+            margin-right: 2%;
+          }
+
+          a{
+            width: 38%;
+            background: #d9ba82;
+            color: black;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 3px;
+            height: 32px;
+            line-height: 32px;
+            font-size: 14px;
+          }
+        }
+
+        .b2{
+          width: 80%;
+          display: block;
+          margin-left: 20%;
+        }
+      }
+    }
+
+    &.page3{
+      z-index: 8;
+      display: none;
+
+      .lottery{
+          width: 320px;
+          height: 188px;
+          position: absolute;
+          left: 50%;
+          margin-left: -160px;
+          bottom: 10%;
+          z-index: 5;
+          background: url(/static/hongdian_lottery/images/card_bg.png) no-repeat;
+          background-size: 100%;
+
+          .lottery-container{
+              width: 290px;
+              height: 153px;
+              position: absolute;
+              top: 16px;
+              left: 15px;
+              z-index: 99;
+
+              #container{
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: 1;
+              }
+
+              .lottery-prize{
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: 0;
+                  background: #f5e0a9;
+                  color: #874406;
+                  text-align: center;
+                  display: none;
+
+                  .prize1{
+                      display: none;
+
+                      p{
+                        line-height: 30px;
+                        font-weight: 600;
+                        font-size: 1.2em;
+                        margin-top: 20px;
+                      }
+
+                      a{
+                        width: 42%;
+                        background: #d9ba82;
+                        color: black;
+                        text-align: center;
+                        display: inline-block;
+                        vertical-align: middle;
+                        border-radius: 3px;
+                        height: 32px;
+                        line-height: 32px;
+                        font-size: 14px;
+                        display: block;
+                        margin: 10px auto 0 auto;
+                      }
+                  }
+
+                  .prize2{
+                      display: none;
+
+                      p{
+                        line-height: 30px;
+                        font-weight: 600;
+                        font-size: 1.2em;
+                        margin-top: 40px;
+                      }
+                  }
+              }
+          }
+      }
+    }
+
+    &.page4{
+      z-index: 7;
+      display: none;
+
+      .page4-con{
+        width: 80%;
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+
+        .form{
+          color: white;
+
+          p{
+            margin: 5px 0 10px 0;
+          }
+
+          input{
+            width: 96%;
+            display: inline-block;
+            vertical-align: middle;
+            border: none;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 5px;
+            padding: 0 2%;
+            outline: none;
+          }
+
+          > div{
+            input{
+              width: 46%;
+              margin-right: 6%;
+              display: inline-block;
+              vertical-align: middle;
+            }
+
+            a{
+              width: 42%;
+              background: #d9ba82;
+              color: black;
+              text-align: center;
+              display: inline-block;
+              vertical-align: middle;
+              border-radius: 3px;
+              height: 32px;
+              line-height: 32px;
+              font-size: 14px;
+            }
+          }
+        }
+
+        img{
+          margin-top: 20px;
+          width: 100%;
+        }
+      }
+    }
+
+    &.page5{
+      z-index: 6;
+      display: none;
+
+      .page5-con{
+        width: 80%;
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        text-align: center;
+
+        h3{
+          color: white;
+          font-size: 500;
+          font-size: 1.2em;
+          margin-bottom: 35px;
+        }
+
+        p{
+          color: #fdf6bb;
+          margin-bottom: 15px;
+          line-height: 24px;
+        }
+
+        h4{
+          color: white;
+          font-size: 12px;
+        }
+      }
+    }
+}

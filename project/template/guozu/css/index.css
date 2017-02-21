@@ -1,0 +1,561 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html {
+  color: #000;
+  background: #FFF;
+  font-family: 'Microsoft Yahei'; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: normal;
+  font-weight: normal; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-size: medium;
+  font-style: normal;
+  font-weight: normal; }
+
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block; }
+
+/* =General
+-----------------------------------------------------------------------------*/
+/* Class for clearing floats */
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+* html .clear {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End clearing floats */
+.zoom {
+  zoom: 1; }
+
+.hidden {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }
+
+.none {
+  display: none; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+html, body, .main, .page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; }
+
+.main .page {
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .main .page.page1 {
+    z-index: 9999;
+    background: url(/static/guozu/images/bg2.jpg) no-repeat;
+    background-size: cover; }
+    .main .page.page1 .page1-container {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 25%; }
+      .main .page.page1 .page1-container .loading-img {
+        width: 25%;
+        display: block;
+        margin: 0 auto 1% auto; }
+      .main .page.page1 .page1-container .l1 {
+        animation-duration: 2s;
+        animation-iteration-count: infinite; }
+      .main .page.page1 .page1-container .l2 {
+        animation-duration: 2s;
+        animation-delay: .5s;
+        animation-iteration-count: infinite;
+        margin-top: -34%; }
+      .main .page.page1 .page1-container .t1 {
+        width: 22%;
+        display: block;
+        margin: 0 auto 6% auto; }
+      .main .page.page1 .page1-container .t2 {
+        width: 63%;
+        display: block;
+        margin: 0 auto;
+        animation-duration: 2s;
+        animation-iteration-count: infinite; }
+    .main .page.page1 .p1 {
+      width: 62%;
+      position: absolute;
+      left: 19%;
+      bottom: 3%; }
+  .main .page.page8 {
+    z-index: 9000;
+    background: url(/static/guozu/images/bg2.jpg) no-repeat;
+    background-size: cover;
+    display: none; }
+    .main .page.page8 .share-img {
+      display: block;
+      width: 90%;
+      margin: 60px auto 20px auto; }
+    .main .page.page8 .p14 {
+      width: 50%;
+      display: block;
+      margin: 0 auto; }
+  .main .page.page2 {
+    z-index: 4; }
+    .main .page.page2 .up {
+      width: 30px;
+      position: fixed;
+      left: 50%;
+      margin-left: -15px;
+      bottom: 15px;
+      z-index: 99;
+      animation: twinkling 1.5s infinite ease-in-out; }
+    .main .page.page2 .voice {
+      width: 20px;
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 99; }
+    .main .page.page2 .swiper-container {
+      width: 100%;
+      height: 100%;
+      background: black; }
+      .main .page.page2 .swiper-container .slide1 {
+        background: url(/static/guozu/images/i1.jpg) no-repeat;
+        background-size: 100%; }
+        .main .page.page2 .swiper-container .slide1 .i1-t {
+          width: 62%;
+          position: absolute;
+          top: 19%;
+          right: 5%; }
+        .main .page.page2 .swiper-container .slide1 .p2 {
+          width: 43%;
+          position: absolute;
+          top: 52%;
+          right: 12%;
+          animation-delay: 1s; }
+      .main .page.page2 .swiper-container .slide2 {
+        background: url(/static/guozu/images/i2.jpg) no-repeat;
+        background-size: 100%; }
+        .main .page.page2 .swiper-container .slide2 .i2-t {
+          width: 58%;
+          position: absolute;
+          top: 1%;
+          left: 24%; }
+        .main .page.page2 .swiper-container .slide2 .p10 {
+          width: 52%;
+          position: absolute;
+          left: 24%;
+          top: 37%;
+          animation-delay: 1s; }
+      .main .page.page2 .swiper-container .slide3 {
+        background: url(/static/guozu/images/i3.jpg) no-repeat;
+        background-size: 100%; }
+        .main .page.page2 .swiper-container .slide3 .i3-t {
+          width: 76%;
+          position: absolute;
+          top: 5%;
+          left: 7%; }
+        .main .page.page2 .swiper-container .slide3 .p3 {
+          width: 45%;
+          position: absolute;
+          top: 31%;
+          left: 10%;
+          animation-delay: 1s; }
+        .main .page.page2 .swiper-container .slide3 .p4 {
+          width: 40%;
+          position: absolute;
+          top: 55%;
+          left: 30%;
+          animation-delay: 2s; }
+  .main .page.page3 {
+    z-index: 3; }
+    .main .page.page3 .tipss {
+      width: 80%;
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      z-index: 100; }
+    .main .page.page3 .page3-con {
+      width: 100%;
+      height: 100%;
+      overflow: auto; }
+    .main .page.page3 .page3-top {
+      background: url(/static/guozu/images/bg1.jpg) no-repeat;
+      background-size: 100%;
+      padding-bottom: 30px;
+      position: relative; }
+      .main .page.page3 .page3-top .map {
+        width: 100%;
+        padding-top: 15%; }
+      .main .page.page3 .page3-top .map-modal {
+        padding: 10px 10px 20px 10px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        position: absolute;
+        width: 66%;
+        top: 10%;
+        left: 17%;
+        z-index: 99;
+        font-size: 14px; }
+        .main .page.page3 .page3-top .map-modal img {
+          width: 50px;
+          float: left;
+          margin-right: 10px; }
+        .main .page.page3 .page3-top .map-modal p.map-title {
+          color: #a36f6a; }
+        .main .page.page3 .page3-top .map-modal span {
+          position: absolute;
+          right: 10px;
+          bottom: 10px; }
+      .main .page.page3 .page3-top .page3-title {
+        margin-top: 10px;
+        color: #852827;
+        font-size: 22px;
+        text-align: center;
+        font-weight: 600; }
+        .main .page.page3 .page3-top .page3-title span {
+          font-size: 24px;
+          font-weight: 700;
+          color: #d74c45;
+          margin: 0 5px; }
+        .main .page.page3 .page3-top .page3-title p {
+          font-size: 20px; }
+      .main .page.page3 .page3-top .page3-btn {
+        text-align: center;
+        color: #852827;
+        font-size: 14px;
+        font-weight: 600; }
+        .main .page.page3 .page3-top .page3-btn .p6 {
+          width: 28%;
+          margin: 20px 0 5px 0; }
+        .main .page.page3 .page3-top .page3-btn .ball {
+          width: 20%;
+          display: block;
+          margin: 10px auto; }
+        .main .page.page3 .page3-top .page3-btn .line {
+          width: 100%;
+          display: block; }
+    .main .page.page3 .page3-list {
+      background: #b6291f;
+      text-align: center;
+      padding: 20px 0; }
+      .main .page.page3 .page3-list ul {
+        height: 430px; }
+      .main .page.page3 .page3-list .p5 {
+        width: 37.5%; }
+      .main .page.page3 .page3-list ul li {
+        text-align: right;
+        padding: 10px 10%;
+        border-bottom: 1px dotted #dbdbdb;
+        color: white; }
+        .main .page.page3 .page3-list ul li div {
+          float: left; }
+        .main .page.page3 .page3-list ul li span {
+          width: 18px;
+          height: 18px;
+          line-height: 20px;
+          text-align: center;
+          background: #ffea00;
+          color: #b6291f;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 10px; }
+  .main .page.page4 {
+    z-index: 2;
+    background: url(/static/guozu/images/bg2.jpg) no-repeat;
+    background-size: cover; }
+    .main .page.page4 .page4-con {
+      width: 100%;
+      height: 100%;
+      overflow: auto; }
+    .main .page.page4 .close {
+      width: 20px;
+      position: absolute;
+      top: 20px;
+      left: 20px; }
+    .main .page.page4 .upload {
+      margin: 60px 0 20px 0;
+      text-align: center;
+      position: relative; }
+      .main .page.page4 .upload .upload-tip {
+        color: white; }
+      .main .page.page4 .upload .preview {
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 10px auto 0 auto;
+        border-radius: 100%;
+        border: 2px solid white;
+        margin-bottom: 10px; }
+      .main .page.page4 .upload p {
+        font-size: 14px;
+        text-align: center;
+        color: white; }
+      .main .page.page4 .upload input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 0;
+        border: 0;
+        opacity: 0; }
+      .main .page.page4 .upload .upload-btn {
+        width: 30%; }
+    .main .page.page4 .tips {
+      margin: 20px 0;
+      color: white; }
+      .main .page.page4 .tips p {
+        width: 80%;
+        margin: 0 auto 5px auto; }
+      .main .page.page4 .tips .swiper-tip {
+        width: 76%;
+        margin: 0 auto;
+        padding: 10px 2%;
+        border: 1px solid white;
+        border-radius: 3px; }
+        .main .page.page4 .tips .swiper-tip .swiper-slide {
+          height: 80px;
+          text-align: center;
+          line-height: 80px; }
+          .main .page.page4 .tips .swiper-tip .swiper-slide img {
+            width: 70%;
+            padding-top: 5%; }
+    .main .page.page4 .p8 {
+      width: 28%;
+      display: block;
+      margin: 0 auto; }
+    .main .page.page4 .publish-tip {
+      width: 100%;
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+      display: none; }
+  .main .page.page5 {
+    z-index: 1;
+    background: url(/static/guozu/images/bg2.jpg) no-repeat;
+    background-size: cover; }
+    .main .page.page5 .page5-con {
+      width: 100%;
+      height: 100%;
+      overflow: auto; }
+    .main .page.page5 .close {
+      width: 20px;
+      position: absolute;
+      top: 20px;
+      left: 20px; }
+    .main .page.page5 .share-btn {
+      width: 80%;
+      display: block;
+      margin: 10px auto 20px auto; }
+    .main .page.page5 p {
+      color: white;
+      text-align: center; }
+    .main .page.page5 .p11 {
+      width: 50%;
+      display: block;
+      margin: 10px auto 20px auto; }
+    .main .page.page5 .page5-img {
+      margin: 60px auto 20px auto;
+      width: 300px;
+      text-align: center;
+      position: relative; }
+      .main .page.page5 .page5-img .logo {
+        width: 300px; }
+      .main .page.page5 .page5-img .page5-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        position: absolute;
+        top: 48px;
+        left: 115px; }
+      .main .page.page5 .page5-img span {
+        position: absolute;
+        top: 41px;
+        left: 51px;
+        color: #fff008;
+        transform: rotate(-39deg); }
+      .main .page.page5 .page5-img p {
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        width: 100%; }
+        .main .page.page5 .page5-img p.page5-name {
+          position: absolute;
+          left: 0;
+          top: 118px; }
+        .main .page.page5 .page5-img p.page5-word {
+          width: 80%;
+          left: 10%;
+          top: 162px;
+          position: absolute; }
+  .main .page.page6 {
+    z-index: 0;
+    background: url(/static/guozu/images/bg2.jpg) no-repeat;
+    background-size: cover; }
+    .main .page.page6 .page6-con {
+      width: 100%;
+      height: 100%;
+      overflow: auto; }
+      .main .page.page6 .page6-con > p {
+        text-align: center;
+        color: white;
+        margin: 40px auto 20px auto;
+        font-size: 20px; }
+    .main .page.page6 .t3 {
+      display: block;
+      width: 80%;
+      margin: 40px auto 20px auto; }
+    .main .page.page6 .p12 {
+      display: block;
+      width: 60%;
+      margin: 20px auto; }
+    .main .page.page6 .p13 {
+      display: block;
+      width: 55%;
+      margin: 0 auto; }
+    .main .page.page6 .phone {
+      width: 86%;
+      margin: 0 auto;
+      padding: 10px 2%;
+      position: relative;
+      background: white; }
+      .main .page.page6 .phone .p9 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 1; }
+      .main .page.page6 .phone .phone-main {
+        position: relative;
+        z-index: 99; }
+        .main .page.page6 .phone .phone-main .phone1 p {
+          max-width: 60%; }
+        .main .page.page6 .phone .phone-main .phone2 {
+          display: none; }
+          .main .page.page6 .phone .phone-main .phone2 p {
+            max-width: 60%; }
+        .main .page.page6 .phone .phone-main .phone-item {
+          margin: 10px 0; }
+          .main .page.page6 .phone .phone-main .phone-item input, .main .page.page6 .phone .phone-main .phone-item span {
+            display: inline-block;
+            vertical-align: middle; }
+          .main .page.page6 .phone .phone-main .phone-item input {
+            border: 1px solid #85bebd;
+            color: #85bebd;
+            border-radius: 3px;
+            padding: 2px;
+            width: 42%; }
+            .main .page.page6 .phone .phone-main .phone-item input.short {
+              width: 15%;
+              margin-right: 3%; }
+          .main .page.page6 .phone .phone-main .phone-item span {
+            background: #85bebd;
+            color: white;
+            padding: 3px;
+            font-size: 14px;
+            border-radius: 3px; }
+        .main .page.page6 .phone .phone-main .phone-btn {
+          width: 50%;
+          height: 28px;
+          line-height: 28px;
+          color: white;
+          text-align: center;
+          border-radius: 5px;
+          background: #ffa200; }
+  .main .page.page7 {
+    display: none;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.7); }
+    .main .page.page7 img {
+      width: 50%;
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+
+@-webkit-keyframes twinkling {
+  0% {
+    opacity: 0;
+    bottom: 15px; }
+  100% {
+    opacity: 1;
+    bottom: 25px; } }
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 5px; }
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  right: 10px;
+  left: auto;
+  background: url(/static/guozu/images/right.png) no-repeat;
+  margin-top: -16px; }
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  left: 10px;
+  right: auto;
+  background: url(/static/guozu/images/left.png) no-repeat;
+  margin-top: -16px; }
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: white; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }

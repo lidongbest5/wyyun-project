@@ -1,0 +1,295 @@
+/* =Reset
+-----------------------------------------------------------------------------*/
+html {
+  color: #000;
+  background: #FFF;
+  font-family: 'Microsoft Yahei'; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: normal;
+  font-weight: normal; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-size: medium;
+  font-style: normal;
+  font-weight: normal; }
+
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block; }
+
+/* =General
+-----------------------------------------------------------------------------*/
+/* Class for clearing floats */
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+* html .clear {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End clearing floats */
+.zoom {
+  zoom: 1; }
+
+.hidden {
+  visibility: hidden; }
+
+.none {
+  display: none; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #0f2834; }
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  overflow: hidden; }
+  .page .page-con {
+    width: 100%;
+    height: 100%;
+    overflow: auto; }
+  .page .main {
+    width: 80%;
+    margin: 0 10%;
+    background: white;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 20px;
+    box-shadow: -2px 0 20px #4f2b1e,0 -2px 20px #4f2b1e,0 2px 20px #4f2b1e,2px 0 20px #4f2b1e; }
+    .page .main .title {
+      display: block;
+      width: 55%;
+      margin: 0 auto 30px auto; }
+    .page .main .main-bottom {
+      margin-top: 50px;
+      position: relative;
+      width: 100%;
+      height: 70px;
+      background: #f05a2a;
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px; }
+      .page .main .main-bottom img {
+        width: 70px;
+        position: absolute;
+        left: 50%;
+        top: -33px;
+        margin-left: -35px; }
+  .page.page1 {
+    z-index: 10;
+    display: none; }
+    .page.page1 .page1-top {
+      background: url(/static/hongdian/images/bg.jpg) no-repeat;
+      background-size: cover;
+      padding: 40px 0; }
+      .page.page1 .page1-top .swiper-wrapper {
+        text-align: center; }
+        .page.page1 .page1-top .swiper-wrapper img {
+          margin-bottom: 10px; }
+        .page.page1 .page1-top .swiper-wrapper .p1 {
+          width: 60px; }
+        .page.page1 .page1-top .swiper-wrapper .p2 {
+          width: 110px; }
+        .page.page1 .page1-top .swiper-wrapper .p3 {
+          width: 150px;
+          margin-top: 30px; }
+        .page.page1 .page1-top .swiper-wrapper .p4 {
+          width: 110px; }
+        .page.page1 .page1-top .swiper-wrapper p {
+          font-size: 14px; }
+    .page.page1 .page1-list {
+      background: #0f2834;
+      padding: 20px; }
+      .page.page1 .page1-list h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ffea00;
+        font-size: 20px; }
+      .page.page1 .page1-list ul li {
+        color: #e9d9b7;
+        margin-bottom: 15px; }
+        .page.page1 .page1-list ul li span {
+          float: right; }
+  .page.page2 {
+    background: url(/static/hongdian/images/bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 40px 0; }
+    .page.page2 .lottery {
+      width: 250px;
+      height: 138px;
+      margin: 0 auto; }
+      .page.page2 .lottery .lottery-container {
+        width: 100%;
+        height: 100%;
+        position: relative; }
+        .page.page2 .lottery .lottery-container #container {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1; }
+        .page.page2 .lottery .lottery-container .lottery-prize {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          color: white;
+          text-align: center;
+          display: none; }
+          .page.page2 .lottery .lottery-container .lottery-prize .prize1, .page.page2 .lottery .lottery-container .lottery-prize .prize2, .page.page2 .lottery .lottery-container .lottery-prize .prize3, .page.page2 .lottery .lottery-container .lottery-prize .prize4 {
+            display: none;
+            position: relative; }
+            .page.page2 .lottery .lottery-container .lottery-prize .prize1 p, .page.page2 .lottery .lottery-container .lottery-prize .prize2 p, .page.page2 .lottery .lottery-container .lottery-prize .prize3 p, .page.page2 .lottery .lottery-container .lottery-prize .prize4 p {
+              position: absolute;
+              top: 25px;
+              left: 0;
+              text-align: center;
+              color: white;
+              font-size: 18px;
+              width: 100%; }
+            .page.page2 .lottery .lottery-container .lottery-prize .prize1 img, .page.page2 .lottery .lottery-container .lottery-prize .prize2 img, .page.page2 .lottery .lottery-container .lottery-prize .prize3 img, .page.page2 .lottery .lottery-container .lottery-prize .prize4 img {
+              width: 100%;
+              height: 100%;
+              display: block; }
+          .page.page2 .lottery .lottery-container .lottery-prize .prize5 {
+            display: none; }
+            .page.page2 .lottery .lottery-container .lottery-prize .prize5 img {
+              width: 100%;
+              height: 100%;
+              display: block; }
+  .page.page4 {
+    background: url(/static/hongdian/images/bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 40px 0; }
+    .page.page4 .form {
+      padding: 0 20px; }
+      .page.page4 .form input {
+        width: 100%;
+        border-radius: 2px;
+        border: 1px solid #c5c5c5;
+        background: #f4f3f3;
+        height: 24px;
+        line-height: 24px;
+        margin: 5px 0; }
+      .page.page4 .form > div input {
+        width: 50%;
+        margin-right: 6%;
+        display: inline-block;
+        vertical-align: middle; }
+      .page.page4 .form > div a {
+        width: 40%;
+        background: #616161;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 3px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px; }
+  .page.page5 {
+    background: url(/static/hongdian/images/bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 40px 0; }
+    .page.page5 .form {
+      padding: 0 20px; }
+      .page.page5 .form section {
+        margin: 15px; }
+        .page.page5 .form section input {
+          width: 100%;
+          border-radius: 2px;
+          border: 1px solid #c5c5c5;
+          background: #f4f3f3;
+          height: 24px;
+          line-height: 24px;
+          margin-top: 10px; }
+  .page.page6 {
+    background: url(/static/hongdian/images/bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    text-align: center; }
+    .page.page6 h3 {
+      font-size: 24px;
+      margin-bottom: 20px; }
+    .page.page6 p {
+      font-size: 16px;
+      line-height: 28px;
+      padding: 0 20px; }
+  .page.page7 {
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5); }
+    .page.page7 img {
+      width: 35%;
+      position: absolute;
+      top: 20px;
+      right: 0; }
+  .page.page8 {
+    z-index: 999;
+    background: white; }
+    .page.page8 ul li {
+      font-size: 18px;
+      padding: 10px 20px;
+      border-bottom: 1px solid #f8f8f8; }
+      .page.page8 ul li span {
+        color: #b0b0b0;
+        display: block;
+        margin-top: 5px;
+        font-size: 14px; }
